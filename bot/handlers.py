@@ -48,15 +48,15 @@ def yes_or_no(message):
         bot.register_next_step_handler(breed_name, get_breed)
     elif message.text == 'No' or message.text == 'no':
         bot.send_message(message.chat.id, 'OK, you can call me any time!')
+    else:
+        repeat = bot.send_message(message.chat.id, 'Incorrect input!')
+        bot.register_next_step_handjhler(repeat, new_search)
 
 
-# def new_search(message):
-#     global user_answer
-#     if user_answer == 'Yes' or 'yes':
-#         breed_name = bot.send_message(message.chat.id, 'enter the name of the breed you want to know about')
-#         bot.register_next_step_handler(breed_name, get_breed)
-#     elif user_answer == 'No' or 'no':
-#         bot.send_message(message.chat.id, 'OK, you can call me any time!')
+def new_search(message):
+    if message.text:
+        breed_name = bot.send_message(message.chat.id, 'enter the name of the breed you want to know about')
+        bot.register_next_step_handler(breed_name, get_breed)
 
 
 def get_breed(message):
@@ -177,7 +177,7 @@ def get_breed(message):
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('watch photo', url=get_images)
         markup.add(btn1)
-        bot.send_message(message.chat.id, 'if you want to see the photo, push "watch photo"', reply_markup=markup)
+        bot.send_message(message.chat.id, 'if you want to see the photo, click "watch photo"', reply_markup=markup)
     new_search = bot.send_message(message.chat.id, 'Would you like to try again? yes/no')
     bot.register_next_step_handler(new_search, yes_or_no)
 
