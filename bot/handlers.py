@@ -49,8 +49,8 @@ def yes_or_no(message):
     elif message.text == 'No' or message.text == 'no':
         bot.send_message(message.chat.id, 'OK, you can call me any time!')
     else:
-        repeat = bot.send_message(message.chat.id, 'Incorrect input!')
-        bot.register_next_step_handjhler(repeat, new_search)
+        repeat = bot.send_message(message.chat.id, 'Incorrect input, type any letter!')
+        bot.register_next_step_handler(repeat, new_search)
 
 
 def new_search(message):
@@ -92,7 +92,7 @@ def get_breed(message):
                 respons_for_user['description'] = elem["description"] if 'description' in elem.keys() else 'no information'
                 respons_for_user['history'] = elem["history"] if 'history' in elem.keys() else 'no information'
                 images_id = elem['reference_image_id']
-        responses1 = [f'Hm "{breed}" interesting choice!', 'Get it!', 'Done', "That's it!"]
+        responses1 = [f'Hm "{breed}" interesting choice!', 'Get it!', 'Done', "That's it!", 'WOW']
         bot.send_message(message.chat.id, f'{random.choice(responses1)}')
         bot.send_message(message.chat.id, f'That is what I know about {breed}.'
                                           f'\nweight: {respons_for_user["weight"]} kg.'
