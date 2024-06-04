@@ -106,33 +106,6 @@ def get_breed(message):
                                           f'\nhistory: {respons_for_user["history"]}')
 
 
-        # version 2 doesn't work correctly
-        # bot.send_message(message.chat.id, f'Hm "{breed}" interesting choice!')
-        # bot.send_message(message.chat.id, f'That is what I know about {breed}.'
-        #                                   f'\nweight: {all_breeds_data[breed]["weight"]["metric"]} kg.'
-        #                                   f'\nheight: {all_breeds_data[breed]["height"]["metric"]} cm. '
-        #                                   f'\nbred for: {all_breeds_data[breed]["bred_for"]} '
-        #                                   f'\nbreed group: {all_breeds_data[breed]["breed_group"]} '
-        #                                   f'\nlife span: {all_breeds_data[breed]["life_span"]} '
-        #                                   f'\ntemperament: {all_breeds_data[breed]["temperament"]}')
-
-
-        # version 3 doesn't work
-        # bot.send_message(message.chat.id, f'Hm "{breed}" interesting choice!')
-        # try:
-        #     bot.send_message(message.chat.id, f'That is what I know about {breed}.'
-        #                                       f'\nweight: {all_breeds_data[breed]["weight"]["metric"]} kg.'
-        #                                       f'\nheight: {all_breeds_data[breed]["height"]["metric"]} cm. '
-        #                                       f'\nbred for: {all_breeds_data[breed]["bred_for"]} '
-        #                                       f'\nbreed group: {all_breeds_data[breed]["breed_group"]} '
-        #                                       f'\nlife span: {all_breeds_data[breed]["life_span"]} '
-        #                                       f'\ntemperament: {all_breeds_data[breed]["temperament"]}'
-        #                                       f'\norigin: {all_breeds_data[breed]["origin"]}'
-        #                                       f'\ndescription: {all_breeds_data[breed]["description"]}'
-        #                                       f'\nhistory: {all_breeds_data[breed]["history"]}')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-
 
         # version 4 works
         # try:
