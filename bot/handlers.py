@@ -107,45 +107,6 @@ def get_breed(message):
 
 
 
-        # version 4 works
-        # try:
-        #     bot.send_message(message.chat.id, f'\nweight: {all_breeds_data[breed]["weight"]["metric"]} kg.')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\nheight: {all_breeds_data[breed]["height"]["metric"]} cm. ')
-        # except KeyError as exc:
-        #         bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\nbred for: {all_breeds_data[breed]["bred_for"]} ')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\nbreed group: {all_breeds_data[breed]["breed_group"]} ')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\nlife span: {all_breeds_data[breed]["life_span"]} ')
-        # except KeyError as exc:
-        #         bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\ntemperament: {all_breeds_data[breed]["temperament"]}')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\norigin: {all_breeds_data[breed]["origin"]}')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\ndescription: {all_breeds_data[breed]["description"]}')
-        # except KeyError as exc:
-        #         bot.send_message(message.chat.id, f'{exc}: no information')
-        # try:
-        #     bot.send_message(message.chat.id, f'\nhistory: {all_breeds_data[breed]["history"]}')
-        # except KeyError as exc:
-        #     bot.send_message(message.chat.id, f'{exc}: no information')
-        # global images_id
-        # images_id = all_breeds_data[breed]["reference_image_id"]
         get_images = f'https://cdn2.thedogapi.com/images/{images_id}.jpg'
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('watch photo', url=get_images)
